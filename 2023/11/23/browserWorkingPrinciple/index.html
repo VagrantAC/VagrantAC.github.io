@@ -24,7 +24,7 @@
 <meta property="og:description" content="浏览器工作原理 概念 浏览器是多进程模型 浏览器是多进程架构，包含  浏览器进程。主要负责界面显示、用户交互、子进程管理 GPU进程 网络进程 Audio Service Storage Service 渲染进程。主要任务是将 HTML、CSS和JavaScript 转换为用户与之交互的网页，排版引擎Blink和JavaScript引擎V8都运行在该进程中。默认情况下，Chrome 会为每个Tab">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-22T17:22:38.068Z">
-<meta property="article:modified_time" content="2023-11-22T17:22:38.068Z">
+<meta property="article:modified_time" content="2024-04-06T16:37:40.021Z">
 <meta property="article:author" content="VagrantAC">
 <meta property="article:tag" content="我们都有光明的未来">
 <meta name="twitter:card" content="summary_large_image">
@@ -264,7 +264,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.4k 字
+          1.5k 字
         
       </span>
     
@@ -275,7 +275,7 @@
         
         
         
-          20 分钟
+          13 分钟
         
       </span>
     
@@ -315,6 +315,14 @@
             <!-- SEO header -->
             <h1 style="display: none"></h1>
             
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2024年4月7日 凌晨
+                  
+                
+              </p>
+            
             
               <div class="markdown-body">
                 
@@ -338,30 +346,6 @@
 <h4 id="进程模型">进程模型</h4>
 <ol type="1">
 <li><strong>Process-per-site-instance</strong>：就是你打开一个网站，然后从这个网站链开的一系列网站都属于一个进程。这是Chrome的默认模式。</li>
-<li>xxxxxxxxxx54 1class Solution {2public:3    long long
-minCost(vector<int>&amp; basket1, vector<int>&amp; basket2) {4      
- map&lt;int, int&gt; mp;5        vector<int> vec;6        for (int i =
-0; i &lt; basket1.size(); i ++) {7            if (mp[basket1[i]] == 0)
-{8                vec.push_back(basket1[i]);9           }10          
- mp[basket1[i]] ++;11       }12        for (int i = 0; i &lt;
-basket2.size(); i ++) {13            if (mp[basket2[i]] == 0) {14      
-         vec.push_back(basket2[i]);15           }16          
- mp[basket2[i]] ++;17       }18        int minn = -1;19        for (int
-i = 0; i &lt; vec.size(); i ++) {20            if (mp[vec[i]] % 2) {21  
-             return -1;22           }23            if (minn == -1) {24  
-             minn = vec[i];25           } else {26                minn =
-min(minn, vec[i]);27           }28            mp[vec[i]] /= 2;29      
-}30        31        for (int i = 0; i &lt; basket1.size(); i ++) {32  
-         mp[basket1[i]] --;33       }34        35        vector<int>
-a;36        for (int i = 0; i &lt; vec.size(); i ++) {37          
- while (mp[vec[i]] &lt; 0) {38                a.push_back(vec[i]);39    
-           mp[vec[i]] ++;40           }41            while (mp[vec[i]]
-&gt; 0) {42                a.push_back(vec[i]);43              
- mp[vec[i]] --;44           }45       }46        47      
- sort(a.begin(), a.end());48        long long ans = 0;49        for (int
-i = 0; i &lt; a.size() / 2; i ++) {50            ans += min(minn *
-((a[i] != minn) + 1), a[i]);51       }52        return ans;53  
-}54};cpp</li>
 <li><strong>Process-per-tab</strong>：这个简单，一个tab一个process，不论各个tab的站点有无联系，就和宣传的那样。用–process-per-tab开启。</li>
 <li><strong>Single
 Process</strong>：这个很熟悉了吧，传统浏览器的模式，没有多进程只有多线程，用–single-process开启。</li>
@@ -492,8 +476,8 @@ alt="img" />
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/03/26/canvas/" title="力扣第 331 场周赛">
-                        <span class="hidden-mobile">力扣第 331 场周赛</span>
+                      <a href="/2023/03/12/reactNote/" title="react 笔记">
+                        <span class="hidden-mobile">react 笔记</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
